@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+      *{
+        margin:  0px;
+        padding: 0px;
+      } 
+     .universal{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+     }
+     form{
+        background-color: white!important;
+        padding: 3px 20px 3px 20px;
+        width: fit-content;
+        margin: auto;
+        border: 3px solid black;
+        box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+     }
+    .div{
+        display: flex;
+       gap: 25px ;
+    }
+   section{
+    margin-top: 10px;
+   }
+    .formcontrol{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @media  (max-width:650px)
+    {
+        .formcontrol 
+        {
+            flex-direction: column;
+        }
+        .div{
+            flex-direction: column;
+        }
+        form{
+            width: 99vw;
+        }
+    }
+    h2{
+        text-decoration:  black wavy underline;
+    }
+    button{
+        width: 80px;
+    }
+    </style>
+</head>
+<body>
+   <div class="universal">
+    <form>
+        <h2>Job Application</h2>
+        <!-- SECTION 1 -->
+       <section id="s1" class="div">
+        
+        <div class="formcontrol"><label for="fname">First Name:</label>
+        <input type="text" 
+        id="fname"
+         placeholder="Enter First Name..."></div>
+         <div class="formcontrol">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" placeholder="Enter Last Name...">
+    </div>
+       </section>
+<!-- SECTION 2 -->
+       <section id="s2" class="div">
+        <div class="formcontrol">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email">
+    </div>
+        <div class="formcontrol">
+        <label for="jrole">Job Role:</label>
+      <select name="jrole" id="jrole">
+        <option value="">Select a Job Role</option>
+        <option value="Web Dev">Web Developer</option>
+        <option value="App Dev">Application Developer</option>
+        <option value="Flutter Dev">Flutter Developer</option>
+        <option value="Android Dev">Android Developer</option>
+      </select>
+    </div>
+       </section>
+       <!-- SECTION 3 -->
+       <section id="s3">
+        <div class="formcontrol">
+       
+        <legend>Enter Address</legend>
+        <textarea  id="adres" cols="10" rows="5"></textarea>
+       
+       </div>
+    </section>
+<!-- SECTION 4 -->
+<section id="s4" class="div">
+    <div class="formcontrol">
+    <label for="cname">City Name:</label>
+    <input type="text" id="cname" placeholder="Enter City...">
+    </div>
+       <div class="formcontrol">
+       <label for="pincode">Pincode:</label>
+       <input type="text" id="pincode" placeholder="Enter Pincode...">
+     </div>
+   </section>
+   <!-- SECTION 5 -->
+   <section id="s4" class="div">
+    <div class="formcontrol">
+    <label for="Sdate">Start Date:</label>
+    <input type="date" id="Sdate" >
+</div>
+    <div class="formcontrol">
+   <label for="CV">Photo:</label>
+    <input type="file" id="Cv" placeholder="...">
+    
+</div>
+<button type="submit"> SUBMIT</button>
+   </section>
+    </form>
+</div>
+</body>
+</html>
